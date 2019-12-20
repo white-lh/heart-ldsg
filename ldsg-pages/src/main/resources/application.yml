@@ -1,0 +1,6 @@
+spring:
+  resources:
+    static-locations: classpath:/templates/
+  mvc:
+    servlet:
+      load-on-startup: 100
