@@ -12,6 +12,7 @@
     <description>各个具体微服务模块</description>
     <modules>
         <module>ldsg-server-goods</module>
+        <module>ldsg-server-landing</module>
     </modules>
     <artifactId>ldsg-server</artifactId>
     <dependencies>
