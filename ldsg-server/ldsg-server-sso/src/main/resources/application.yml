@@ -1,21 +1,19 @@
 server:
-  port: 2222
+  port: 2211
 
 spring:
   application:
-    name: ldsg-landing
+    name: ldsg-sso
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/stuinfomanager?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/ldsgd?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: root
   redis:
-    host: 192.168.136.88 # Redis服务器地址
-    port: 6379 # Redis服务器连接端口
-    database: 0
-  session:
-    store-type: redis
+    host: 192.168.136.88
+    port: 6379
+
 eureka:
   client:
     fetch-registry: true
@@ -24,11 +22,11 @@ eureka:
       defaultZone: http://127.0.0.1:1111/eureka/
 
   instance: #服务名称的修改
-    instance-id: ldsg-server-landing
+    instance-id: ldsg-server-sso
     prefer-ip-address: true     #访问路径可以显示IP地址
 
 info:
-  app.name: ldsg-landing
+  app.name: ldsg-sso
   company.name: www.ldsg.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
@@ -36,6 +34,4 @@ info:
 
 mybatis: #别名
   type-aliases-package: com.ldsg.pojo
-
-
 

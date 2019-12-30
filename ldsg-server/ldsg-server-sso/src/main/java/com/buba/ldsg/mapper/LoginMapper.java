@@ -4,7 +4,7 @@ import com.buba.ldsg.pojo.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserMapper {
-    //登陆
+public interface LoginMapper {
+    //登陆方法
     User toLogin(User user);
 }

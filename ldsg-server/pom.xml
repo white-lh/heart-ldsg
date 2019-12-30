@@ -13,6 +13,7 @@
     <modules>
         <module>ldsg-server-goods</module>
         <module>ldsg-server-landing</module>
+        <module>ldsg-server-sso</module>
     </modules>
     <artifactId>ldsg-server</artifactId>
     <dependencies>
@@ -21,6 +22,11 @@
             <groupId>com.buba</groupId>
             <artifactId>ldsg-common</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <!-- feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!-- druid连接池 -->
         <dependency>
@@ -44,8 +50,29 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version><!--版本号自己选一个就行-->
         </dependency>
 
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
         <!-- eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
