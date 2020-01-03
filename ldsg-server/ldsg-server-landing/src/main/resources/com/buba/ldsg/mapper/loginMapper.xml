@@ -3,6 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.buba.ldsg.mapper.LoginMapper">
     <select id="toLogin" resultType="com.buba.ldsg.pojo.User">
-        select * from tb_user where u_username = #{u_username} and u_password = #{u_password}
+        select * from tb_user where u_username = #{u_username}
     </select>
+    <insert id="toRegister">
+        insert into tb_user(u_username,u_password) values(#{u_username},#{u_password})
+    </insert>
 </mapper>

@@ -1,21 +1,18 @@
+server:
+  port: 6603
+
 spring:
   application:
-    name: ldsg-pages
-  resources:
-    static-locations: classpath:/templates/
-  mvc:
-    servlet:
-      load-on-startup: 100
-
-server:
-  port: 5521
-
+    name: ldsg-landing-api
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://127.0.0.1:1111/eureka/
+
   instance: #服务名称的修改
-    instance-id: ldsg-pages
+    instance-id: ldsg-server-landing-api
     prefer-ip-address: true     #访问路径可以显示IP地址
+
+

@@ -20,17 +20,15 @@ info:
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
   build.description: ${project.description}
+
 #zuul网关的配置
 zuul:
   prefix: /api # 设置统一的公共前缀
   ignored-services: "* "#原真实服务名忽略，忽略全部用“*”,忽略一个用服务名
   routes:
-    server-goods: #面向服务的路由配置，可以自定义设置名称
-      serviceId: ldsg-goods #服务名
-      path: /goods/** #映射的url
-    server-landing: #面向服务的路由配置，可以自定义设置名称
+    server-sales: #面向服务的路由配置，可以自定义设置名称
       serviceId: ldsg-landing #服务名
       path: /landing/** #映射的url
-    server-session: #面向服务的路由配置，可以自定义设置名称
-      serviceId: ldsg-sso #服务名
-      path: /sso/** #映射的url
+  ribbon-isolation-strategy: semaphore
+  semaphore:
+    max-semaphores: 20

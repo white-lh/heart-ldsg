@@ -13,6 +13,7 @@
         <module>ldsg-server</module>
         <module>ldsg-gateway-zuul</module>
         <module>ldsg-pages</module>
+        <module>ldsg-server-api</module>
     </modules>
     <packaging>pom</packaging>
     <dependencyManagement>
