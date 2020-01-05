@@ -23,7 +23,7 @@ public class PageFilter implements Filter {
         HttpSession session = req.getSession();
         String token = (String) session.getAttribute("token");
         User user = (User) session.getAttribute(token);
-        if (!("".equals(token)) || requestURL.contains("/css/") || requestURL.contains("/js/") || requestURL.contains("/fonts/") || requestURL.contains("/img/") || requestURL.contains("login") || requestURL.contains("/toLogin")) {
+        if ((!("".equals(token)) && token != null) || requestURL.contains("/css/") || requestURL.contains("/js/") || requestURL.contains("/fonts/") || requestURL.contains("/img/") || requestURL.contains("login") || requestURL.contains("/toLogin") || requestURL.contains("/register")) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             servletRequest.getRequestDispatcher("404.html").forward(servletRequest,

@@ -6,7 +6,9 @@ spring:
   mvc:
     servlet:
       load-on-startup: 100
-
+  thymeleaf:
+    cache: false
+#开发时关闭缓存,不然没法看到实时页面
 server:
   port: 5521
 

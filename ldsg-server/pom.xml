@@ -13,6 +13,7 @@
     <modules>
         <module>ldsg-server-goods</module>
         <module>ldsg-server-landing</module>
+        <module>ldsg-server-picture</module>
     </modules>
     <artifactId>ldsg-server</artifactId>
     <dependencies>

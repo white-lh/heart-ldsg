@@ -19,6 +19,7 @@ public class PageController {
         ModelAndView mav = new ModelAndView();
         String s = ldsgLanding.toLogin(user);
         if (s.equals("mmcw") || s.equals("zzcw")) {
+            mav.getModel().put("status", s);
             mav.setViewName("login.html");
         } else {
             //将token存入session中
@@ -31,4 +32,6 @@ public class PageController {
         }
         return mav;
     }
+
+
 }

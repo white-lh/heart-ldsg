@@ -250,11 +250,15 @@
                                     <label class="control-label">账号</label>
                                     <input type="text" name="u_username" placeholder="在此处输入您的账号"
                                            id="input-email" class="form-control">
+                                    <p style="color: red;"
+                                       th:text="${status == 'zzcw' ?  '账号输入错误！':''}"></p>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">密码</label>
                                     <input type="text" name="u_password" placeholder="密码"
                                            id="input-password" class="form-control">
+                                    <p style="color: red;"
+                                       th:text="${status == 'mmcw' ?  '密码输入错误！':''}"></p>
                                 </div>
                                 <p class="lost-password"><a href="forgot-password.html">忘记密码?</a>
                                 </p>

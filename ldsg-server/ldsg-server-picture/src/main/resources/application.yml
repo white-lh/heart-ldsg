@@ -1,0 +1,39 @@
+server:
+  port: 6602
+spring:
+  application:
+    name: ldsg-picture
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ldsgd?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:1111/eureka/
+  instance: #服务名称的修改
+    instance-id: ldsg-server-picture
+    prefer-ip-address: true #访问路径可以显示IP地址
+info:
+  app.name: ldsg-picture
+  company.name: www.ldsg.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+  build.description: ${project.description}
+mybatis: #别名
+  type-aliases-package: com.ldsg.pojo
+
+#fastDFS 配置
+
+#fdfs:
+#  so-timeout: 1501
+#  connect-timeout: 601
+#  thumb-image:
+#    height: 150
+#    width: 150
+#  web-server-url: 192.168.182.111:8888/
+#  tracker-list[0]: 192.168.182.110:22122
